@@ -1,7 +1,7 @@
-# Milesight EM300-MCS - Magnetic Contact Switch
-![EM300-MCS](EM300-MCS.png)
+# Milesight EM300-SLD - Spot Leak Detection Sensor
+![EM300-SLD](EM300-SLD.png)
 
-Deze payload decoder is voor de Milesight EM300-MCS.
+Deze payload decoder is voor de Milesight EM300-SLD.
 
 Voor meer informatie bezoek (https://wwww.delmation.nl).
 
@@ -13,7 +13,7 @@ Voor meer informatie bezoek (https://wwww.delmation.nl).
  01: battery      -> 0x01         0x75          [1byte ] Unit: %
  03: temperature  -> 0x03         0x67          [2bytes] Unit: °C
  04: humidity     -> 0x04         0x68          [1byte ] Unit: %
- 06: hall         -> 0x06         0x00          [1byte ] Unit:
+ 05: waterleak    -> 0x05         0x00          [1byte ] Unit:
 
  ```
 
@@ -21,7 +21,7 @@ Voor meer informatie bezoek (https://wwww.delmation.nl).
 
 **Payload**
 ```
-01 75 5C 03 67 B6 00 04 68 5B 06 00 01
+01 75 5C 03 67 B6 00 04 68 5B 05 00 01
 ```
 
 
@@ -31,7 +31,7 @@ Voor meer informatie bezoek (https://wwww.delmation.nl).
    - `01 75 5C`
    - `03 67 B6 00`
    - `04 68 5B`
-   - `06 00 01`
+   - `05 00 01`
 
 
 
@@ -42,6 +42,6 @@ Voor meer informatie bezoek (https://wwww.delmation.nl).
   "battery": 92,
   "temperature": 18.2,
   "humidity": 45.5,
-  "hall": 1
+  "waterleak": 1
 }
  ```
